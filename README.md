@@ -13,10 +13,15 @@ Code:
   friendPizza.theDamage();
 Expected Output: 15
 
-Test 3. "It should calculate the price of your pizza dependeing on both size & topping choice (10 + size price modifier + topping price modifier)"
+Test 3. "It should calculate the price of your pizza depending on both size & topping choice (10 + size price modifier + topping price modifier)"
 Code:
   friendPizza.theDamage();
 Expected Output: 17
+
+Test 4. "It should allow users to choose multiple toppings & add the appropriate price modifiers"
+Code:
+  friendPizza.theDamage();
+Expected Output: 
 
 ```
 
