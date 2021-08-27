@@ -1,91 +1,3 @@
-// Pizza Object needs size & topping properties
-// Price formula
-
-// Pizza Business Logic
-
-function Pizza(SizeChoice, ToppingChoice) {
-  this.size = SizeChoice;
-  this.topping = ToppingChoice;
-}
-
-const sizes = [
-  {pizzaSize: "itty", price: 5},
-  {pizzaSize: "middy", price: 8},
-  {pizzaSize: "chubby", price: 10}
-]
-
-const toppings = [
-  {topping: "Ice Cream", price: 3},
-  {topping: "Happy Egg", price: 2},
-  {topping: "A Kitten", price: 10}
-]
-
-Pizza.prototype.theDamage = function () {
-  let cost = 10;
-  for (let i = 0;  i < sizes.length; i++) {
-    const yourPizza = sizes[i].pizzaSize;
-    if (yourPizza === this.size) {
-      cost += sizes[i].price;
-    }
-  }
-  for (let i = 0;  i < toppings.length; i++) {
-    const yourPizza = toppings[i].topping;
-    if (yourPizza === this.topping) {
-      cost += toppings[i].price;
-    }
-  }
-    return cost;
-}
-
-let friendPizza = new Pizza("itty", "Happy Egg");
-friendPizza.theDamage();
-
-
-// ////////////////////////////////////////////////////////////////////
-
-// Testing Multi-Toppings
-
-function Pizza(SizeChoice, ToppingChoice) {
-  this.size = SizeChoice;
-  this.topping = ToppingChoice;
-  this.contacts = {};
-}
-
-const sizes = [
-  {pizzaSize: "itty", price: 5},
-  {pizzaSize: "middy", price: 8},
-  {pizzaSize: "chubby", price: 10}
-]
-
-const toppings = [
-  {topping: "Ice Cream", price: 3},
-  {topping: "Happy Egg", price: 2},
-  {topping: "A Kitten", price: 10}
-]
-
-Pizza.prototype.theDamage = function () {
-  let cost = 10;
-  for (let i = 0;  i < sizes.length; i++) {
-    const yourPizza = sizes[i].pizzaSize;
-    if (yourPizza === this.size) {
-      cost += sizes[i].price;
-    }
-  }
-  for (let i = 0;  i < toppings.length; i++) {
-    const yourPizza = toppings[i].topping;
-    if (yourPizza === this.topping) {
-      cost += toppings[i].price;
-    }
-  }
-    return cost;
-}
-
-//
-
-let friendPizza = new Pizza("itty", "Happy Egg");
-friendPizza.theDamage();
-
-// ///////////////////////////////////////
 
 // Business Logic for Pizza ---------
 
@@ -202,3 +114,72 @@ friendPizza.theDamage();
 
 // UI
 
+$(document).ready(function() {
+  $("form#orderForm").submit(function(event) {
+    event.preventDefault();
+    const inputName = $("input#custName").val();
+    const inputSize = $("select#size").val();
+    console.log(inputSize);
+    const inputTopping1 = $("select#toppings").val();
+    console.log(inputTopping1);
+    const inputTopping2 = $("select#toppings2").val();
+    console.log(inputTopping2);
+    const inputTopping3 = $("select#toppings3").val();
+    console.log(inputTopping3);
+    const inputTopping4 = $("select#toppings4").val();
+    console.log(inputTopping4);
+    // const inputMoreToppings = $("input#topping1").val();
+    const friendPizza = new Pizza(inputSize, inputTopping1, inputTopping2, inputTopping3, inputTopping4);
+    let yourPrice = friendPizza.theDamage();
+    $("#customerName").text(inputName);
+    $("#pSize").html(friendPizza.size);
+    $("#toppingList1").html(friendPizza.topping + ", ");
+    $("#toppingList2").html(friendPizza.topping2 + ", ");
+    $("#toppingList3").html(friendPizza.topping3);
+    $("#toppingList4").html(", & " + friendPizza.topping4);
+    $("#finalPrice").html("$" + yourPrice);
+  });
+});
+
+
+// ////////////////////////////////////////////////////////////////////
+
+// Old Version, in case
+// Pizza Business Logic
+
+// function Pizza(SizeChoice, ToppingChoice) {
+//   this.size = SizeChoice;
+//   this.topping = ToppingChoice;
+// }
+
+// const sizes = [
+//   {pizzaSize: "itty", price: 5},
+//   {pizzaSize: "middy", price: 8},
+//   {pizzaSize: "chubby", price: 10}
+// ]
+
+// const toppings = [
+//   {topping: "Ice Cream", price: 3},
+//   {topping: "Happy Egg", price: 2},
+//   {topping: "A Kitten", price: 10}
+// ]
+
+// Pizza.prototype.theDamage = function () {
+//   let cost = 10;
+//   for (let i = 0;  i < sizes.length; i++) {
+//     const yourPizza = sizes[i].pizzaSize;
+//     if (yourPizza === this.size) {
+//       cost += sizes[i].price;
+//     }
+//   }
+//   for (let i = 0;  i < toppings.length; i++) {
+//     const yourPizza = toppings[i].topping;
+//     if (yourPizza === this.topping) {
+//       cost += toppings[i].price;
+//     }
+//   }
+//     return cost;
+// }
+
+// let friendPizza = new Pizza("itty", "Happy Egg");
+// friendPizza.theDamage();

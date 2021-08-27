@@ -21,7 +21,7 @@ Expected Output: 17
 Test 4. "It should allow users to choose multiple toppings & add the appropriate price modifiers"
 Code:
   friendPizza.theDamage();
-Expected Output: 
+Expected Output: 40
 
 ```
 
