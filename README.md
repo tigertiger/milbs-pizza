@@ -1,67 +1,3 @@
-## Specs
-
-```javascript
-Describe: new Pizza();
-Test 1. "It should display your pizza with selected size & toppings"
-Code: 
-  let friendPizza = new Pizza("itty", "Happy Egg");
-  friendPizza;
-Expected Output: Pizza {size: "itty", basicToppings: "Happy Egg", price: 10}
-
-Test 2. "It should calculate the price of your pizza depending on size (10 + size price modifier)"
-Code: 
-  friendPizza.theDamage();
-Expected Output: 15
-
-Test 3. "It should calculate the price of your pizza depending on both size & topping choice (10 + size price modifier + topping price modifier)"
-Code:
-  friendPizza.theDamage();
-Expected Output: 17
-
-Test 4. "It should allow users to choose multiple toppings & add the appropriate price modifiers"
-Code:
-  friendPizza.theDamage();
-Expected Output: 40
-
-```
-  `/++/:/++/`         :+/+:                                                
-  .+++++++++.         `:/:`                                                
-   -+++++++-            `                                                  
-    `:/+/:`                                                                
-      `.`        `.--``--.`                                                
-                 :+++//+++:                                                
-                 :++++++++:                                                
-                  -/++++/-                                                 
-                   `-//-`                                                  
-                                    ``....------....``                     
-                                `..---------------------.``                
-                    ````     `.----:/:/:-........-----------.`             
-             `     .++++`  .-------:+++:`````````````..--------`           
-      `/++/-/++:`   ./:. .------.```.:.``````````````````..------`         
-      .+++++++++.      `------.`````````````````````````````.-----.`       
-       -+++++++-      .-----.`````````````````````````````````.-----`      
-        .:+++:`      .----..:::-.:::.```````````````````````````-----.     
-          `.`       .----.`:+++++++++````````````````````````````-----`    
-                   .----.``./+++++++:`````````````````````````````-----`   
-                  `-----````.:++++/-```````````````````````````````-----   
-                  .----```````.::-`````````````````````````````````.----`  
-                  -----`````````````````````````````````````````````----.  
-                 `----.`````````````````````````````````````````````-----  
-                 `----.```````````.:+/```````````````:/+.```````````-----  
-                 `----.```````````ymNN.`````````````/dNN+```````````-----  
-                  -----```````````./+-```````````````:+/````````````----.  
-                  .----`````````.:/:.`````````````````-//-`````````.----`  
-                   -----````````-+++-``o````.o````./``/+//````````.----.   
-                   `----.``````````````:/:-:+//:-:+.``````````````-----    
-                    .----.```````````````...```...```````````````-----`    
-                     .-----````````````````````````````````````.-----`     
-                      `-----.`````````````````````````````````------`      
-                       `.-----.````````````````````````````.------.        
-                         `-------.```````````````````````.------.`         
-                           `.-------..``````````````...-------.`           
-                             `.-------------...------------.`              
-                                 `.--------------------..`                 
-                                     ```..........```                      
 
 # _Milb's [Kawaii] Pizza_
 
@@ -89,6 +25,33 @@ Instructions for cloning can be found [here](https://docs.github.com/en/github/c
 * _Click "Order Your Pizza"_
 * _The website will present a receipt recapping your order and telling you how much you'll owe._
 * _Get your money ready and wait around for your ~cute~ pizza. It may never arrive, but what a nice time you'll have had ordering it._
+
+## Specs
+
+```javascript
+Describe: new Pizza();
+Test 1. "It should display your pizza with selected size & toppings"
+Code: 
+  let friendPizza = new Pizza("itty", "Happy Egg");
+  friendPizza;
+Expected Output: Pizza {size: "itty", basicToppings: "Happy Egg", price: 10}
+
+Test 2. "It should calculate the price of your pizza depending on size (10 + size price modifier)"
+Code: 
+  friendPizza.theDamage();
+Expected Output: 15
+
+Test 3. "It should calculate the price of your pizza depending on both size & topping choice (10 + size price modifier + topping price modifier)"
+Code:
+  friendPizza.theDamage();
+Expected Output: 17
+
+Test 4. "It should allow users to choose multiple toppings & add the appropriate price modifiers"
+Code:
+  friendPizza.theDamage();
+Expected Output: 40
+
+```
 
 ## Known Bugs
 
