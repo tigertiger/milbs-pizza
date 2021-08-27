@@ -8,6 +8,11 @@ Code:
   friendPizza;
 Expected Output: Pizza {size: "itty", basicToppings: "Happy Egg", price: 10}
 
+Test 2. "It should calculate the price of your pizza depending on size (10 + size price modifier)"
+Code: 
+  friendPizza.theDamage();
+Expected Output: 15
+
 ```
 
 # _{Application Name}_

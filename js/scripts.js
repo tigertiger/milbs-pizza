@@ -22,7 +22,7 @@ const toppings = [
   {topping: "A Kitten", price: 10},
 ]
 
-Pizza.prototype.chooseSize = function() {
+Pizza.prototype.theDamage = function() {
   let finalCost = 0;
   for (let i = 0; i < sizes.length; i ++) {
     const yourPizza = sizes[i].size;
