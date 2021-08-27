@@ -3,32 +3,39 @@
 
 // Pizza Business Logic
 
-function Pizza(size, basicToppings) {
-  this.size = size;
-  this.basicToppings = basicToppings;
-  this.price = 10;
-  // this.premiumToppings = premiumToppings;
+function Pizza(SizeChoice, ToppingChoice) {
+  this.size = SizeChoice;
+  this.topping = ToppingChoice;
 }
 
 const sizes = [
-  {size: "itty", price: 5},
-  {size: "mitty", price: 8},
-  {size: "chubby", price: 10},
+  {pizzaSize: "itty", price: 5},
+  {pizzaSize: "middy", price: 8},
+  {pizzaSize: "chubby", price: 10}
 ]
 
 const toppings = [
   {topping: "Ice Cream", price: 3},
   {topping: "Happy Egg", price: 2},
-  {topping: "A Kitten", price: 10},
+  {topping: "A Kitten", price: 10}
 ]
 
-Pizza.prototype.theDamage = function() {
-  let finalCost = 0;
-  for (let i = 0; i < sizes.length; i ++) {
-    const yourPizza = sizes[i].size;
+Pizza.prototype.theDamage = function () {
+  let cost = 10;
+  for (let i = 0;  i < sizes.length; i++) {
+    const yourPizza = sizes[i].pizzaSize;
     if (yourPizza === this.size) {
-      finalCost = sizes[i].price + this.price;
+      cost += sizes[i].price;
     }
   }
-  return finalCost;
+  for (let i = 0;  i < toppings.length; i++) {
+    const yourPizza = toppings[i].topping;
+    if (yourPizza === this.topping) {
+      cost += toppings[i].price;
+    }
+  }
+    return cost;
 }
+
+let friendPizza = new Pizza("itty", "Happy Egg");
+friendPizza.theDamage();
