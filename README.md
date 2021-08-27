@@ -1,7 +1,14 @@
 ## Specs
 
-Describe:
-Test 1.
+```javascript
+Describe: new Pizza();
+Test 1. "It should display your pizza with selected size & toppings"
+Code: 
+  let friendPizza = new Pizza("itty", "Happy Egg");
+  friendPizza;
+Expected Output: Pizza {size: "itty", basicToppings: "Happy Egg", price: 10}
+
+```
 
 # _{Application Name}_
 
