@@ -112,11 +112,16 @@ friendPizza.theDamage();
 //     return cost;
 // }
 
+// If I go through the plustoppings and if they're checked, push their "Value" [which will be their price as a number] into an array. Then on checkout, sum the array and add it to the pizza price.
+
 // UI
 
 $(document).ready(function() {
   $("form#orderForm").submit(function(event) {
     event.preventDefault();
+    $("#orderReceipt").show();
+    $("#again").show();
+    $("#order").hide();
     const inputName = $("input#custName").val();
     const inputSize = $("select#size").val();
     console.log(inputSize);
@@ -139,6 +144,11 @@ $(document).ready(function() {
     $("#toppingList4").html(", & " + friendPizza.topping4);
     $("#finalPrice").html("$" + yourPrice);
   });
+
+  $("#orderAgain").click(function() {
+    location.reload();
+  });
+
 });
 
 

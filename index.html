@@ -15,9 +15,7 @@
     <div id="order">
       <form id="orderForm">
         <div class="form-group">
-          <label for="custName">
-            <h5>Your Name</h5>
-          </label>
+          <label for="custName" id="yourName"><p>Your Name</p></label>
           <input class="form-control" type="text" id="custName" name="custName">
         </div>
         <div class="form-group">
@@ -30,7 +28,7 @@
         </div>
         <div class="form-group">
           <select class="form-control" name="toppings" id="toppings">
-            <option></option>
+            <option>Select a Topping</option>
             <option value="Ice Cream">Ice Cream</option>
             <option value="Happy Egg">A Happy Egg</option>
             <option value="A Kitten">A Kitten</option>
@@ -39,7 +37,7 @@
         </div>
         <div class="form-group">
           <select class="form-control" name="toppings2" id="toppings2">
-            <option></option>
+            <option>Select a Topping</option>
             <option value="Ice Cream">Ice Cream</option>
             <option value="Happy Egg">A Happy Egg</option>
             <option value="A Kitten">A Kitten</option>
@@ -48,7 +46,7 @@
         </div>
         <div class="form-group">
           <select class="form-control" name="toppings3" id="toppings3">
-            <option></option>
+            <option>Select a Topping</option>
             <option value="Ice Cream">Ice Cream</option>
             <option value="Happy Egg">A Happy Egg</option>
             <option value="A Kitten">A Kitten</option>
@@ -57,7 +55,7 @@
         </div>
         <div class="form-group">
           <select class="form-control" name="toppings4" id="toppings4">
-            <option></option>
+            <option>Select a Topping</option>
             <option value="Ice Cream">Ice Cream</option>
             <option value="Happy Egg">A Happy Egg</option>
             <option value="A Kitten">A Kitten</option>
@@ -65,22 +63,25 @@
           </select>
         </div>
         <div class="form-group">
-          <input type="checkbox" id="topping1" name="topping1" value="Ice Cream">
+          <input type="checkbox" id="topping1" name="topping1" value="3">
           <label for="topping1">Ice Cream</label><br />
-          <input type="checkbox" id="topping2" name="topping2" value="Happy Egg">
+          <input type="checkbox" id="topping2" name="topping2" value="2">
           <label for="topping2">Happy Egg</label><br />
-          <input type="checkbox" id="topping3" name="topping3" value="A Kitten">
+          <input type="checkbox" id="topping3" name="topping3" value="10">
           <label for="topping3">A Kitten</label><br />
-          <input type="checkbox" id="topping4" name="topping4" value="Cute Little Clouds">
+          <input type="checkbox" id="topping4" name="topping4" value="15">
           <label for="topping4">Cute Little Clouds</label><br />
         </div>
-        <button id="submit" type="submit" class="button">Order Your Pitzi</button>
+        <button id="submit" type="submit" class="button">Order Your Pizza</button>
       </form>
     </div>
     <div id="orderReceipt">
       <p>Thank You for Your Order, <span id="customerName"></span>!</p>
       <p>We're making you a <span id="pSize"></span> pizza with <span id="toppingList1"></span><span id="toppingList2"></span><span id="toppingList3"></span><span id="toppingList4"></span></p>
       <p>Please have <span id="finalPrice"></span> (plus tip!) ready for your delivery driver!</p>
+    </div>
+    <div id="again">
+      <button id="orderAgain">Order Another Pizza</button>
     </div>
   </div>
 </body>

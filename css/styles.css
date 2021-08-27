@@ -1,0 +1,25 @@
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container {
+width:80%;
+padding:2% 0 3%;
+}
+
+#yourName {
+  line-height: 0em;
+  padding:50px 0px 0px;
+  margin-bottom:0px;
+}
+
+.form-group {
+width:350px;
+}
+
+#orderReceipt {
+  display:none;
+}
+
+#again {
+  display:none;
+}
