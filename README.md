@@ -85,15 +85,14 @@ _This website allows users to design a cute/kawaii pizza by selecting options fr
 Instructions for cloning can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)._
 * _Navigate to the top level of the pizza-pizza directory_
 * _Open index.html in your browser_
-* _You can also access the live site at [https://tigertiger.github.io/REPONAME](https://tigertiger.github.io/REPONAME/)_
-* _Enter your name & select the pizza size and toppings you'd like using the drop-down menu_
-* _Click "Order Your Pitzi"_
+* _Enter your name & select the pizza size and toppings you'd like, using the drop-down menu_
+* _Click "Order Your Pizza"_
 * _The website will present a receipt recapping your order and telling you how much you'll owe._
 * _Get your money ready and wait around for your ~cute~ pizza. It may never arrive, but what a nice time you'll have had ordering it._
 
 ## Known Bugs
 
-* _The Additional Toppings checkbox functionality does not currently work_
+* _The Additional Toppings checkbox functionality does not work...yet_
 
 ## License
 

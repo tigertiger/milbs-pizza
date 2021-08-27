@@ -44,10 +44,6 @@ const toppings4 = [
   {topping4: "Cute Little Clouds", price: 15}
 ]
 
-Pizza.prototype.addPlusToppings = function(newTopping) {
-  this.newToppings[newTopping.name] = newTopping;
-};
-
 Pizza.prototype.theDamage = function () {
   let cost = 10;
   for (let i = 0;  i < sizes.length; i++) {
@@ -83,36 +79,6 @@ Pizza.prototype.theDamage = function () {
     return cost;
 }
 
-// Business Logic for PlusToppings ---------
-
-function PlusToppings(name, addTopPrice) {
-  this.name = name;
-  this.addTopPrice = addTopPrice;
-}
-
-// Test Content -----------
-
-let friendPizza = new Pizza("itty", "Happy Egg", "Ice Cream");
-let sadEgg = new PlusToppings("Sad Egg", 7);
-friendPizza.addPlusToppings(sadEgg);
-friendPizza;
-
-friendPizza.theDamage();
-
-// --------------------------
-
-// PlusToppings.prototype.sumToppings = function () {
-//   let cost = 0;
-//   for (let i = 0;  i < names.length; i++) {
-//     const yourToppings = names[i].name;
-//     if (yourToppings === this.name) {
-//       cost += names[i].addTopPrice;
-//     }
-//   }
-//     return cost;
-// }
-
-// If I go through the plustoppings and if they're checked, push their "Value" [which will be their price as a number] into an array. Then on checkout, sum the array and add it to the pizza price.
 
 // UI
 
@@ -124,16 +90,10 @@ $(document).ready(function() {
     $("#order").hide();
     const inputName = $("input#custName").val();
     const inputSize = $("select#size").val();
-    console.log(inputSize);
     const inputTopping1 = $("select#toppings").val();
-    console.log(inputTopping1);
     const inputTopping2 = $("select#toppings2").val();
-    console.log(inputTopping2);
     const inputTopping3 = $("select#toppings3").val();
-    console.log(inputTopping3);
     const inputTopping4 = $("select#toppings4").val();
-    console.log(inputTopping4);
-    // const inputMoreToppings = $("input#topping1").val();
     const friendPizza = new Pizza(inputSize, inputTopping1, inputTopping2, inputTopping3, inputTopping4);
     let yourPrice = friendPizza.theDamage();
     $("#customerName").text(inputName);
@@ -153,43 +113,41 @@ $(document).ready(function() {
 
 
 // ////////////////////////////////////////////////////////////////////
+// WIP Content:
 
-// Old Version, in case
-// Pizza Business Logic
+// $("#chooseToppings").click(function(event){
+//   event.preventDefault();
+//   let toppingValues = $("#checkToppings input:checkbox:checked").map(function(){
+//     return $(this).val();
+//   }).get(); // <----
+//   console.log(toppingValues);
+// });
 
-// function Pizza(SizeChoice, ToppingChoice) {
-//   this.size = SizeChoice;
-//   this.topping = ToppingChoice;
-// }
+// let numberedToppings = toppingValues.split(",").map(function(topping) {
+//   return parseInt(topping);
+// });
 
-// const sizes = [
-//   {pizzaSize: "itty", price: 5},
-//   {pizzaSize: "middy", price: 8},
-//   {pizzaSize: "chubby", price: 10}
-// ]
+// let numberedToppings = (toppingValues.toString()).split(",").map((i) => Number(i));
+// numberedToppings;
 
-// const toppings = [
-//   {topping: "Ice Cream", price: 3},
-//   {topping: "Happy Egg", price: 2},
-//   {topping: "A Kitten", price: 10}
-// ]
+// let sum = numberedToppings.reduce(function(a, b) {
+//   return a +b;
+// });
+// sum;
 
-// Pizza.prototype.theDamage = function () {
-//   let cost = 10;
-//   for (let i = 0;  i < sizes.length; i++) {
-//     const yourPizza = sizes[i].pizzaSize;
-//     if (yourPizza === this.size) {
-//       cost += sizes[i].price;
-//     }
-//   }
-//   for (let i = 0;  i < toppings.length; i++) {
-//     const yourPizza = toppings[i].topping;
-//     if (yourPizza === this.topping) {
-//       cost += toppings[i].price;
-//     }
-//   }
-//     return cost;
-// }
+// /////////////////////////////
 
-// let friendPizza = new Pizza("itty", "Happy Egg");
-// friendPizza.theDamage();
+Pizza.prototype.toppingTotal = function() {
+  let toppingValues = $("#checkToppings input:checkbox:checked").map(function(){
+    return $(this).val();
+  }).get(); // <----
+  console.log(toppingValues);
+
+  let numberedToppings = (toppingValues.toString()).split(",").map((i) => Number(i));
+  console.log(numberedToppings);
+
+  let sum = numberedToppings.reduce(function(a, b) {
+    return a +b;
+  });
+  return sum;
+}
