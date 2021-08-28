@@ -1,9 +1,18 @@
 body {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #fdf7fa;
 }
 .container {
-width:80%;
-padding:2% 0 3%;
+width:65%;
+background-color:#e2a3c7;
+border-radius:100px;
+padding:3% 0 10%;
+margin:2% auto;
+box-sizing: border-box;
+}
+
+h1 {
+text-align:center;
 }
 
 #yourName {
@@ -17,6 +26,8 @@ width:350px;
 }
 
 #orderReceipt {
+  box-sizing: border-box;
+  padding:10% 0%;
   display:none;
 }
 
