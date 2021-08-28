@@ -22,6 +22,7 @@ background-position: right right;
 }
 
 h1 {
+font-size:4em;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 text-align:center;
 color:#60435f;
@@ -66,4 +67,5 @@ margin:-100px 0px 0px -70px;
 
   .button:hover {
     background-color:#47314773;
+    cursor:cell;
   }
