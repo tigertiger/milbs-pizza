@@ -39,52 +39,19 @@
             </label>
           </div>
         </div>
-        <!-- <div class="form-group">
-          <select class="form-control" name="size" id="size">
-            <option>Select a Size</option>
-            <option value="Itty">Itty</option>
-            <option value="Middy">Middy</option>
-            <option value="Chubby">Chubby</option>
-          </select>
-        </div> -->
-        <!-- <div class="form-group">
-          <select class="form-control" name="toppings" id="toppings">
-            <option>Select a Topping</option>
-            <option value="Ice Cream">Ice Cream</option>
-            <option value="Happy Egg">A Happy Egg</option>
-            <option value="A Kitten">A Kitten</option>
-            <option value="Cute Little Clouds">Cute Little Clouds</option>
+        <div class="form-group">
+          <p>Choose your sauce!</p>
+          <select class="form-control" name="toppings" id="toppings" required>
+            <option value="chocolate frosting">Chocolate Frosting</option>
+            <option value="sunshine">Sunshine</option>
+            <option value="love">Love</option>
+            <option value="marinara">Marinara</option>
           </select>
         </div>
-        <div class="form-group">
-          <select class="form-control" name="toppings2" id="toppings2">
-            <option>Select a Topping</option>
-            <option value="Ice Cream">Ice Cream</option>
-            <option value="Happy Egg">A Happy Egg</option>
-            <option value="A Kitten">A Kitten</option>
-            <option value="Cute Little Clouds">Cute Little Clouds</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <select class="form-control" name="toppings3" id="toppings3">
-            <option>Select a Topping</option>
-            <option value="Ice Cream">Ice Cream</option>
-            <option value="Happy Egg">A Happy Egg</option>
-            <option value="A Kitten">A Kitten</option>
-            <option value="Cute Little Clouds">Cute Little Clouds</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <select class="form-control" name="toppings4" id="toppings4">
-            <option>Select a Topping</option>
-            <option value="Ice Cream">Ice Cream</option>
-            <option value="Happy Egg">A Happy Egg</option>
-            <option value="A Kitten">A Kitten</option>
-            <option value="Cute Little Clouds">Cute Little Clouds</option>
-          </select>
-        </div> -->
         <div class="form-group" id="checkToppings">
           <p>What do you want on your pizza?</p>
+          <input type="checkbox" id="topping0" name="cuteness" value="0" checked required>
+          <label for="topping0">Cuteness</label><br />
           <input type="checkbox" id="topping1" name="ice cream" value="3">
           <label for="topping1">Ice Cream</label><br />
           <input type="checkbox" id="topping2" name="happy egg" value="2">
@@ -99,7 +66,7 @@
     </div>
     <div id="orderReceipt">
       <p>Thank You for Your Order, <span id="customerName"></span>!</p>
-      <p>We're making you a <span id="pSize"></span> pizza with <span id="toppingList"></p>
+      <p>We're making you a <span id="pSize"></span> pizza with <span id="toppingList"></span> & <span id="sauce"></span></p>
       <p>Please have <span id="finalPrice"></span> (plus tip!) ready for your delivery driver!</p>
     </div>
     <div id="again">
