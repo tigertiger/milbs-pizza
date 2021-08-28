@@ -2,7 +2,7 @@ body {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #a8dcd9;
   color:#473147;
-  background-image: url(/img/cloud-bg.png);
+  background-image: url(../img/cloud-bg.png);
   background-blend-mode: soft-light;
   text-shadow: 0.5px 0.5px #2e202e;
 }
@@ -14,7 +14,7 @@ border-radius:100px;
 padding:3% 0 10%;
 margin:2% auto;
 box-sizing: border-box;
-background-image: url(/img/background-clouds.png);
+background-image: url(../img/background-clouds.png);
 background-blend-mode:screen;
 background-size:80%;
 background-repeat: no-repeat;
