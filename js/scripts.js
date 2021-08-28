@@ -79,7 +79,24 @@ Pizza.prototype.theDamage = function () {
     return cost;
 }
 
-
+Pizza.prototype.toppingTotal = function() {
+  let toppingValues = $("#checkToppings input:checkbox:checked").map(function(){
+    return $(this).val();
+  }).get();
+  console.log(toppingValues);
+  let numberedToppings = (toppingValues.toString()).split(",").map((i) => Number(i));
+  console.log(numberedToppings);
+  let sum = numberedToppings.reduce(function(a, b) {
+    return a +b;
+  });
+  return sum;
+}
+Pizza.prototype.toppingNames = function() {
+let topNames = $("#checkToppings input:checkbox:checked").map(function(){
+  return $(this).attr('name');
+}).get();
+return topNames;
+}
 // UI
 
 $(document).ready(function() {
@@ -89,65 +106,29 @@ $(document).ready(function() {
     $("#again").show();
     $("#order").hide();
     const inputName = $("input#custName").val();
-    const inputSize = $("select#size").val();
+    const inputSize = $("input:radio[name=size]:checked").val();
+    // const inputSize = $("select#size").val();
     const inputTopping1 = $("select#toppings").val();
     const inputTopping2 = $("select#toppings2").val();
     const inputTopping3 = $("select#toppings3").val();
     const inputTopping4 = $("select#toppings4").val();
     const friendPizza = new Pizza(inputSize, inputTopping1, inputTopping2, inputTopping3, inputTopping4);
-    let yourPrice = friendPizza.theDamage();
+    // let yourYums = ((friendPizza.toppingNames()).toString());
+    let yourYums = ((friendPizza.toppingNames()).join(", "));
+    let yourPrice = (friendPizza.theDamage() + friendPizza.toppingTotal());
+    console.log(friendPizza.theDamage(), "The Damage");
+    console.log(friendPizza.toppingTotal(), "Topping Total");
+    console.log(yourPrice, "Your Price");
     $("#customerName").text(inputName);
     $("#pSize").html(friendPizza.size);
-    $("#toppingList1").html(friendPizza.topping + ", ");
-    $("#toppingList2").html(friendPizza.topping2 + ", ");
-    $("#toppingList3").html(friendPizza.topping3);
-    $("#toppingList4").html(", & " + friendPizza.topping4);
+    $("#toppingList").html(yourYums);
     $("#finalPrice").html("$" + yourPrice);
+    console.log(friendPizza.toppingNames());
   });
+
 
   $("#orderAgain").click(function() {
     location.reload();
   });
 
 });
-
-
-// ////////////////////////////////////////////////////////////////////
-// WIP Content:
-
-// $("#chooseToppings").click(function(event){
-//   event.preventDefault();
-//   let toppingValues = $("#checkToppings input:checkbox:checked").map(function(){
-//     return $(this).val();
-//   }).get(); // <----
-//   console.log(toppingValues);
-// });
-
-// let numberedToppings = toppingValues.split(",").map(function(topping) {
-//   return parseInt(topping);
-// });
-
-// let numberedToppings = (toppingValues.toString()).split(",").map((i) => Number(i));
-// numberedToppings;
-
-// let sum = numberedToppings.reduce(function(a, b) {
-//   return a +b;
-// });
-// sum;
-
-// /////////////////////////////
-
-Pizza.prototype.toppingTotal = function() {
-  let toppingValues = $("#checkToppings input:checkbox:checked").map(function(){
-    return $(this).val();
-  }).get(); // <----
-  console.log(toppingValues);
-
-  let numberedToppings = (toppingValues.toString()).split(",").map((i) => Number(i));
-  console.log(numberedToppings);
-
-  let sum = numberedToppings.reduce(function(a, b) {
-    return a +b;
-  });
-  return sum;
-}
