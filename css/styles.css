@@ -1,18 +1,31 @@
 body {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #fdf7fa;
+  background-color: #a8dcd9;
+  color:#473147;
+  background-image: url(/img/cloud-bg.png);
+  background-blend-mode: soft-light;
+  text-shadow: 0.5px 0.5px #2e202e;
 }
+
 .container {
 width:65%;
-background-color:#e2a3c7;
+background-color:#ce98dbb6;
 border-radius:100px;
 padding:3% 0 10%;
 margin:2% auto;
 box-sizing: border-box;
+background-image: url(/img/background-clouds.png);
+background-blend-mode:screen;
+background-size:80%;
+background-repeat: no-repeat;
+background-position: right right;
 }
 
 h1 {
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 text-align:center;
+color:#60435f;
+font-weight:800;
 }
 
 #yourName {
@@ -34,3 +47,23 @@ width:350px;
 #again {
   display:none;
 }
+
+#leftWashi {
+margin:-100px 0px 0px -70px;
+}
+
+#rightWashi {
+  margin:-100px -70px 0px 0px;
+  }
+
+  .button {
+    background-color:#473147;
+    color: #fdf7fa;
+    border: 4px dotted #ce98db;
+    text-transform: lowercase;
+    padding:5px 15px;
+  }
+
+  .button:hover {
+    background-color:#47314773;
+  }
